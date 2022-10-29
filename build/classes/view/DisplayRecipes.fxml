@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="panRoot" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DisplayRecipesController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="213.0" layoutY="-2.0" stroke="TRANSPARENT" strokeType="INSIDE" width="400.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#ff7c54" />
+                  <Stop color="#ffc54b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="157.0" fitWidth="400.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/cook.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="175.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="400.0" />
+      <Label fx:id="lbTitel" alignment="CENTER" layoutX="33.0" layoutY="138.0" prefHeight="39.0" prefWidth="334.0" text="وصفات جديدة">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font></Label>
+      <HBox layoutY="643.0" prefHeight="56.0" prefWidth="400.0" />
+      <Pane layoutX="104.0" layoutY="218.0" prefHeight="200.0" prefWidth="226.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" layoutX="-43.0" layoutY="65.0" prefHeight="39.0" prefWidth="274.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="txlink" prefHeight="27.0" prefWidth="150.0" style="-fx-border-color: #ffbb8e;" />
+                  <TextField fx:id="txdishname" prefHeight="26.0" prefWidth="97.0" style="-fx-border-color: #ffbb8e;" />
+               </children>
+            </HBox>
+            <Label layoutX="165.0" layoutY="35.0" text="اسم الأكلة">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="36.0" text="الرابط">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="32.0" layoutY="375.0" prefHeight="200.0" prefWidth="311.0">
+         <children>
+            <ScrollPane fx:id="viewWindow" layoutX="-12.0" layoutY="-30.0" prefHeight="307.0" prefWidth="363.0" />
+         </children>
+      </Pane>
+      <Circle fx:id="btadd" fill="#ffbb8e" layoutX="55.0" layoutY="298.0" onMouseClicked="#add" radius="11.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Label layoutX="51.0" layoutY="289.0" text="+" />
+      <Pane layoutX="28.0" layoutY="138.0" prefHeight="60.0" prefWidth="62.0" style="-fx-border-radius: 5;" />
+   </children>
+</AnchorPane>
