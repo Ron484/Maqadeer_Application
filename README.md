@@ -13,7 +13,7 @@ social media that you plan to cook. in simple words, this app is
 your right hand in cooking.
 
 # Project Members:
-Ekram Feras/n
+Ekram Feras
 Rehab Al-Idrisi
 Fadia Alshaarani
 Afnan Farouqui
