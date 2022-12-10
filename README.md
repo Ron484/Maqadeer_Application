@@ -1,7 +1,7 @@
 # Maqadeer_Application
 The project of Advanced Programming Course.
 
-#Project Idea:
+# Project Idea:
 If you are one of those who are perplexed and overwhelmed by
 the constant question “What am I going to cook today?” then
 this app is for you.
@@ -12,7 +12,7 @@ recently. Finally, it`s a good place to keep all recipes from
 social media that you plan to cook. in simple words, this app is
 your right hand in cooking.
 
-#Project Members:
+# Project Members:
 Ekram Feras
 Rehab Al-Idrisi
 Fadia Alshaarani
@@ -21,7 +21,7 @@ Nouf Twakkul
 
 
 
-#Run Evironment:
+# Run Evironment:
 Java: openjdk 11.0.16
 IDE: netbeans 8.2
 MySQL: 8.30
@@ -29,7 +29,7 @@ Dependencies:
 Java Mail API
 JDBC connector: https://dev.mysql.com/downloads/connector/j/
 
-#How to Run the project:
+# How to Run the project:
 Download the project in zip from Github.
 Download the sutiable version of JDBC connector.
 Create the DataBase by running the file "maqadeerDB.sql", where in project folder, in MySQL Workbensh.
