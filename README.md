@@ -28,12 +28,12 @@ https://user-images.githubusercontent.com/77066505/200802728-f17bd175-a27e-4e82-
 - JDBC connector: https://dev.mysql.com/downloads/connector/j/
 
 ## How to Run the project: 
-1- Download the project in zip from Github.
-2- Download the sutiable version of JDBC connector.
-3- Create the DataBase by running the file "maqadeerDB.sql", where in project folder, in MySQL Workbensh.
-4- In netbeans, File > import Project > from zip and choose the zip file from step 1.
-5- You need to resolve the project by changing the JDBC conncetor by your own.
-6- You need to change the password of DataBase by your own.
-7- Finally, you can run the project.
-8- There are sample data to try the app in the same folder called "maqadeer_sampleData.sql".
+ - Download the project in zip from Github.
+ - Download the sutiable version of JDBC connector.
+ - Create the DataBase by running the file "maqadeerDB.sql", where in project folder, in MySQL Workbensh.
+ - In netbeans, File > import Project > from zip and choose the zip file from step 1.
+ - You need to resolve the project by changing the JDBC conncetor by your own.
+ - You need to change the password of DataBase by your own.
+ - Finally, you can run the project.
+ - There are sample data to try the app in the same folder called "maqadeer_sampleData.sql".
 
