@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="controller.ProfileController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="213.0" layoutX="-7.0" stroke="TRANSPARENT" strokeType="INSIDE" width="408.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.48627451062202454" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.772549033164978" blue="0.29411765933036804" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="155.0" fitWidth="441.0" layoutX="-1.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/cook.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="100.0" arcWidth="90.0" fill="WHITE" height="200.0" layoutX="1.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" width="400.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="1.0" layoutY="142.0" stroke="WHITE" strokeType="INSIDE" width="400.0" />
+      <Label alignment="CENTER" layoutX="36.0" layoutY="105.0" prefHeight="39.0" prefWidth="333.0" style="-fx-text-alignment: center; -fx-font-family: dubai;" text="الصفحة الشخصية" textFill="#282626">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="136.0" layoutY="373.0" prefHeight="30.0" prefWidth="142.0" text="اسم المستخدم">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="12.0" layoutY="12.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pngegg%20(5).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Circle layoutX="203.0" layoutY="256.0" radius="82.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.45454543196793756">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.6039215922355652" blue="0.3137255012989044" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.48627451062202454" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <ImageView fitHeight="253.0" fitWidth="152.0" layoutX="127.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/chef.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="131.0" layoutY="471.0" prefHeight="30.0" prefWidth="142.0" text="البريد الإلكتروني">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserName" alignment="CENTER" layoutX="40.0" layoutY="403.0" prefHeight="30.0" prefWidth="324.0" style="-fx-background-color: #eee; -fx-border-color: #e7e5e5;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserEmail" alignment="CENTER" layoutX="40.0" layoutY="505.0" prefHeight="30.0" prefWidth="324.0" style="-fx-background-color: #eee; -fx-border-color: #e7e5e5;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="589.0" prefHeight="39.0" prefWidth="174.0" style="-fx-background-color: #FF9A50; -fx-background-radius: 10;" />
+      <Label alignment="CENTER" layoutX="149.0" layoutY="594.0" prefHeight="30.0" prefWidth="142.0" text="عدد الوصفات: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRecipeCount" alignment="CENTER" layoutX="131.0" layoutY="594.0" prefHeight="30.0" prefWidth="56.0" text="4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

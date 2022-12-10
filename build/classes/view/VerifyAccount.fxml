@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VerifyAccountController">
+   <children>
+      <Pane layoutX="61.0" layoutY="33.0" prefHeight="271.0" prefWidth="280.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff7c54" height="106.0" layoutX="313.0" layoutY="276.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="112.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" cache="true" height="271.0" layoutX="-5.0" layoutY="429.0" opacity="0.77" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="409.0">
+         <effect>
+            <Blend />
+         </effect>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.48627451062202454" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.3764705955982208" blue="0.250980406999588" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="200.0" arcWidth="200.0" height="457.0" layoutX="-9.0" layoutY="310.0" nodeOrientation="LEFT_TO_RIGHT" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="416.0">
+         <effect>
+            <Blend />
+         </effect>
+         <fill>
+            <LinearGradient endX="1.0" endY="0.14393936504017218" startX="1.0" startY="0.9090908964474996">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.772549033164978" blue="0.29411765933036804" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.48627451062202454" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="327.0" layoutY="-17.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="400.0" />
+      <VBox layoutX="106.0" layoutY="416.0" prefHeight="99.0" prefWidth="228.0" spacing="5.0">
+         <children>
+            <Label fx:id="lblPassword" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="220.0" />
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="230.0" text="أدخل الرمز المرسل :" textAlignment="RIGHT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="68.0" prefWidth="231.0" spacing="5.0">
+               <children>
+                  <TextField fx:id="text_field_verify" alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="235.0" style="-fx-border-color: #000000;" />
+                  <Label fx:id="error_label" alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="228.0" textFill="#bc0505">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="271.0" fitWidth="333.0" layoutX="33.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/girlCooks.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="90.0" layoutY="347.0" text="التحقق من البريد الإلكتروني">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="verify_button" layoutX="215.0" layoutY="573.0" minWidth="53.0" mnemonicParsing="false" onAction="#verify" prefHeight="34.0" prefWidth="60.0" style="-fx-background-color: #020106; -fx-background-radius: 10;" text="تحقق" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="back_button" layoutX="144.0" layoutY="573.0" minWidth="53.0" mnemonicParsing="false" onAction="#backAction" prefHeight="34.0" prefWidth="60.0" style="-fx-background-color: #020106; -fx-background-radius: 10;" text="العودة" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="18.0" fitWidth="20.0" layoutX="81.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/verifiedIcon.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="6.0" layoutY="363.0" prefHeight="100.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

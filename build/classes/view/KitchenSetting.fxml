@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KitchenSettingController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="213.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="400.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#ff7c54" />
+                  <Stop color="#ffc54b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="157.0" fitWidth="400.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/cook.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="100.0" arcWidth="90.0" fill="WHITE" height="200.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" width="400.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutY="144.0" stroke="WHITE" strokeType="INSIDE" width="400.0" />
+      <Label alignment="CENTER" layoutX="35.0" layoutY="96.0" prefHeight="39.0" prefWidth="333.0" style="-fx-text-alignment: center; -fx-font-family: dubai;" text="تعديل مكونات المطبخ" textFill="#282626">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="5.0" layoutY="8.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pngegg%20(5).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <VBox fx:id="deletingPane" alignment="CENTER" layoutX="32.0" layoutY="288.0" prefHeight="126.0" prefWidth="333.0" spacing="10.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="CENTER" text="حذف عنصر">
+               <padding>
+                  <Insets right="2.0" />
+               </padding>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNameDelete" alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="324.0" promptText="اكتب اسم العنصر الذي تريد حذفه" />
+            <Label fx:id="lblDeleteMsg" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="18.0" prefWidth="334.0" textFill="#bc0505">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button layoutX="150.0" layoutY="561.0" mnemonicParsing="false" onAction="#confirm" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #FF9A50; -fx-background-radius: 30;" text="تأكيد" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblConfirm" alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="625.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="18.0" prefWidth="334.0" textAlignment="CENTER" textFill="#1fb704">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <VBox fx:id="addingPane" alignment="CENTER" layoutX="32.0" layoutY="303.0" prefHeight="226.0" prefWidth="333.0" spacing="20.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="CENTER" text="إضافة عنصر">
+               <padding>
+                  <Insets right="2.0" />
+               </padding>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cboItemSection" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="342.0" promptText="اختر مكان العنصر" style="-fx-background-color: #CCDACD; -fx-background-radius: 15;">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding></ComboBox>
+            <GridPane hgap="7.0" prefHeight="78.0" prefWidth="342.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <DatePicker fx:id="tfExpireDateAdd" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="171.0" promptText="تاريخ الانتهاء" />
+                  <TextField fx:id="tfNameAdd" alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="162.0" promptText="اسم العنصر" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="tfQAdd" alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="168.0" promptText="المقدار" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="tfUnitAdd" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="144.0" promptText="الوحدة" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Label fx:id="lblAddMsg" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="18.0" prefWidth="334.0" textFill="#bc0505">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox fx:id="udpatePane" alignment="CENTER" layoutX="32.0" layoutY="303.0" prefHeight="226.0" prefWidth="333.0" spacing="20.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="CENTER" text="تعديل عنصر">
+               <padding>
+                  <Insets right="2.0" />
+               </padding>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cboUdateSection" nodeOrientation="RIGHT_TO_LEFT" prefHeight="39.0" prefWidth="334.0" promptText="تغيير مكان العنصر" style="-fx-background-color: #CCDACD; -fx-background-radius: 12;">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding></ComboBox>
+            <GridPane hgap="7.0" prefHeight="78.0" prefWidth="342.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <DatePicker fx:id="tfExpireDateUpdate" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="171.0" promptText="تاريخ الانتهاء" />
+                  <TextField fx:id="tfUdpdateName" alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="162.0" promptText="اسم العنصر" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="tfQUpdate" alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="168.0" promptText="المقدار" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="tfUnitUpdate" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="144.0" promptText="الوحدة" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Label fx:id="lblUpdateMsg" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="18.0" prefWidth="334.0" textFill="#bc0505">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox layoutX="111.0" layoutY="187.0" prefHeight="53.0" prefWidth="175.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#updateFood" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: F9D98B; -fx-background-radius: 15;" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/blackUpdate_icon.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#deleteFood" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: FEA597; -fx-background-radius: 15;" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/delete_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addFood" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: ADDAD1; -fx-background-radius: 15;" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/save_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
