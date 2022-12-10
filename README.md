@@ -8,13 +8,6 @@ It keeps all your foodstuffs to give you a suggested meal to cook. It will keep 
 For more details,read "Advanced Programming Doc file".
 
 
-## Project Members: 
-- Ekram Feras
-- Rehab Al-Idrisi  
-- Fadia Alshaarani
-- Afnan Farouqui
-- Nouf Twakkul
-
 ## Project Vedio:
 
 
