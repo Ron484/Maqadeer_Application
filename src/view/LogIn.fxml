@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogInController">
+   <children>
+      <Pane layoutX="61.0" layoutY="33.0" prefHeight="271.0" prefWidth="280.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff7c54" height="106.0" layoutX="313.0" layoutY="276.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="112.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" cache="true" height="271.0" layoutX="-5.0" layoutY="429.0" opacity="0.77" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="409.0">
+         <effect> 
+            <Blend />
+         </effect>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.48627451062202454" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.3764705955982208" blue="0.250980406999588" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="200.0" arcWidth="200.0" height="450.0" layoutX="-9.0" layoutY="317.0" nodeOrientation="LEFT_TO_RIGHT" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="416.0">
+         <effect>
+            <Blend />
+         </effect>
+         <fill>
+            <LinearGradient endX="1.0" endY="0.14393936504017218" startX="1.0" startY="0.9090908964474996">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.772549033164978" blue="0.29411765933036804" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.48627451062202454" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="327.0" layoutY="-10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="400.0" />
+      <VBox layoutX="113.0" layoutY="388.0" prefHeight="178.0" prefWidth="202.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="203.0" text="اسم المستخدم / الإيميل">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfName" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: #ffffff; -fx-border-color: #010101; -fx-border-width: 1; -fx-border-radius: 2;" />
+            <Label fx:id="lblUserMsg" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="15.0" prefWidth="200.0" textFill="#b9211b">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRecipeNameMsg1" contentDisplay="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="131.0" textFill="#bc0505">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="203.0" text="كلمة المرور">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="tflPassword" style="-fx-background-color: #ffffff; -fx-border-width: 1; -fx-border-color: #010101; -fx-border-radius: 2;" />
+            <Label fx:id="lblPassword" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="220.0" textFill="#b9211b">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <Button fx:id="btSubmit" layoutX="181.0" layoutY="631.0" minWidth="53.0" mnemonicParsing="false" onAction="#logIn" prefHeight="33.0" prefWidth="53.0" style="-fx-background-color: #020106; -fx-background-radius: 10;" text="دخول" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="278.0" fitWidth="393.0" layoutX="4.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/girlCooks.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="142.0" layoutY="336.0" text="تسجيل الدخول">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <VBox layoutX="126.0" layoutY="560.0" prefHeight="50.0" prefWidth="165.0" spacing="5.0">
+         <children>
+            <Label fx:id="lblForgetPassword" alignment="CENTER" onMouseClicked="#goForgetPasswordPage" prefHeight="24.0" prefWidth="170.0" text="هل نسيت كلمة المرور؟">
+               <font>
+                  <Font size="15.0" />
+               </font>
+             
+            </Label>
+            <Label fx:id="btlSignUp" alignment="CENTER" onMouseClicked="#goSignUpPage" prefHeight="22.0" prefWidth="162.0" text="إنشاء حساب جديد">
+               <font>
+                  <Font size="15.0" />
+               </font>
+             
+            </Label>
+         </children>
+      </VBox>
+      <ImageView fitHeight="26.0" fitWidth="16.0" layoutX="88.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/userIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="16.0" layoutX="89.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/passwordIcon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
+   <children>
+      <Pane layoutX="61.0" layoutY="33.0" prefHeight="271.0" prefWidth="280.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff7c54" height="106.0" layoutX="313.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="112.0" />
+      <Rectangle arcHeight="200.0" arcWidth="200.0" height="512.0" layoutX="-9.0" layoutY="234.0" nodeOrientation="LEFT_TO_RIGHT" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="428.0">
+         <effect>
+            <Blend />
+         </effect>
+         <fill>
+            <LinearGradient endX="1.0" endY="0.14393936504017218" startX="1.0" startY="0.9090908964474996">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.772549033164978" blue="0.29411765933036804" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.48627451062202454" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="302.0" layoutY="-68.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="400.0" />
+      <Button layoutX="182.0" layoutY="654.0" minWidth="53.0" mnemonicParsing="false" onAction="#signUp" prefHeight="32.0" prefWidth="60.0" style="-fx-background-color: #020106; -fx-background-radius: 10;" text="تسجيل" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="227.0" fitWidth="336.0" layoutX="37.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/girlCooks.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="132.0" layoutY="241.0" text="إنشاء حساب جديد">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLogPage" alignment="CENTER" layoutX="84.0" layoutY="623.0" onMouseClicked="#goLogPage" prefHeight="18.0" prefWidth="253.0" text="هل لديك حساب ؟ قم بتسجيل الدخول" textAlignment="CENTER" />
+      <GridPane layoutX="75.0" layoutY="283.0" prefHeight="339.0" prefWidth="254.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="130.4000244140625" minWidth="10.0" prefWidth="40.59999237060546" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.20000762939452" minWidth="10.0" prefWidth="214.20000762939452" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="27.000006103515616" minHeight="10.0" prefHeight="26.200018310546866" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="45.400000000000006" minHeight="10.0" prefHeight="32.59998168945313" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="24.600012207031256" minHeight="10.0" prefHeight="23.800024414062506" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="34.999975585937506" minHeight="10.0" prefHeight="34.999975585937506" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="24.600012207031256" minHeight="10.0" prefHeight="20.600012207031256" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="46.19998779296873" minHeight="10.0" prefHeight="38.19998779296873" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="203.0" text="اسم المستخدم" GridPane.columnIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userNameField" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: #ffffff; -fx-border-color: #010101; -fx-border-width: 1; -fx-border-radius: 2;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="nameMsg" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="225.0" textFill="#b9211b" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="203.0" text="الإيميل" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailField" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: #ffffff; -fx-border-color: #010101; -fx-border-width: 1; -fx-border-radius: 2;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="emailMsg" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="225.0" textFill="#b9211b" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="26.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@images/userIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@images/emailIcon.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="203.0" text="كلمة المرور" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: #ffffff; -fx-border-width: 1; -fx-border-color: #010101; -fx-border-radius: 2;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label fx:id="passwordMsg" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="220.0" textFill="#b9211b" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="18.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@images/passwordIcon.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="203.0" text="تأكيد كلمة المرور" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="chkPasswordField" style="-fx-background-color: #ffffff; -fx-border-width: 1; -fx-border-color: #010101; -fx-border-radius: 2;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label fx:id="chkPasswordMsg" alignment="CENTER_RIGHT" prefHeight="10.0" prefWidth="198.0" textFill="#b9211b" GridPane.columnIndex="1" GridPane.rowIndex="11">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="18.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="10">
+               <image>
+                  <Image url="@images/passwordIcon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

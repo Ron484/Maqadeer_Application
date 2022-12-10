@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MyKitchenController">
+   <children>
+      <Label fx:id="lblEmpty" alignment="CENTER" layoutX="25.0" layoutY="260.0" prefHeight="360.0" prefWidth="362.0" style="-fx-background-color: white;" text="نتائج البحث غير متوفرة" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="213.0" layoutX="10.0" layoutY="8.0" stroke="TRANSPARENT" strokeType="INSIDE" width="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#ff7c54" />
+                  <Stop color="#ffc54b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="157.0" fitWidth="400.0" layoutX="10.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0">
+         <image>
+            <Image url="@images/cook.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="100.0" arcWidth="90.0" fill="WHITE" height="200.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" width="400.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutY="145.0" stroke="WHITE" strokeType="INSIDE" width="400.0" />
+      <Label alignment="CENTER" layoutX="35.0" layoutY="95.0" prefHeight="39.0" prefWidth="334.0" style="-fx-font-family: dubai;" text="مطبخي">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <HBox layoutY="653.0" prefHeight="56.0" prefWidth="400.0" style="-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="644.0">
+         <children>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goNewRecipesPage" prefHeight="59.0" prefWidth="80.0" selected="true" style="-fx-background-color: #f2f2f2; -fx-background-radius: 0;" text="وصفات" textFill="#79776f">
+               <toggleGroup>
+                  <ToggleGroup />
+               </toggleGroup>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/wasfat.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goShopListPage" prefHeight="59.0" prefWidth="80.0" selected="true" style="-fx-background-color: #f2f2f2; -fx-background-radius: 0;" text="قائمة الشراء" textFill="#79776f">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/mushtriaty.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <toggleGroup>
+                  <ToggleGroup />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goHomePage" prefHeight="59.0" prefWidth="80.0" style="-fx-background-color: #f2f2f2; -fx-border-radius: 0;" text="الرئيسية" textFill="#79776f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/hom.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <toggleGroup>
+                  <ToggleGroup />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goFoodPage" prefHeight="59.0" prefWidth="80.0" selected="true" style="-fx-background-color: #FF9A50; -fx-background-radius: 0;" text="مطبخي" textFill="#79776f">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/mtb.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <toggleGroup>
+                  <ToggleGroup />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goMyRecipePage" prefHeight="59.0" prefWidth="80.0" style="-fx-background-color: #f2f2f2; -fx-background-radius: 0;" text="طبخاتي" textFill="#79776f">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/tabkhaty.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup />
+               </toggleGroup>
+            </ToggleButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="32.0" layoutY="149.0" prefHeight="39.0" prefWidth="336.0" spacing="5.0" style="-fx-background-color: white;">
+         <children>
+            <ToggleButton fx:id="btOther" mnemonicParsing="false" onAction="#chooseSection" prefHeight="31.0" prefWidth="84.0" style="-fx-background-radius: 12; -fx-background-color: white;" styleClass="black-button" text="أخرى">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="sections" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="btSpices" mnemonicParsing="false" onAction="#chooseSection" prefHeight="31.0" prefWidth="84.0" style="-fx-background-radius: 12; -fx-background-color: white;" styleClass="black-button" text="بهارات" toggleGroup="$sections">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="btFreezer" mnemonicParsing="false" onAction="#chooseSection" prefHeight="31.0" prefWidth="84.0" style="-fx-background-radius: 12; -fx-background-color: white;" styleClass="black-button" text="فريزر" toggleGroup="$sections">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="btFridge" mnemonicParsing="false" onAction="#chooseSection" prefHeight="31.0" prefWidth="84.0" style="-fx-background-radius: 12; -fx-background-color: white;" styleClass="black-button" text="ثلاجة" toggleGroup="$sections">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="btAll" mnemonicParsing="false" onAction="#chooseSection" prefHeight="31.0" prefWidth="84.0" selected="true" style="-fx-background-radius: 12; -fx-background-color: #464141;" styleClass="black-button" text="الكل" textFill="WHITE" toggleGroup="$sections">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </ToggleButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="34.0" layoutY="193.0" prefHeight="39.0" prefWidth="335.0" style="-fx-background-color: #e6e6e6; -fx-background-radius: 188;">
+         <children>
+            <TextField fx:id="tfSearch" alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="257.0" promptText="بحث" style="-fx-background-color: #e6e6e6;">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/ser.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="59.0" layoutY="268.0" nodeOrientation="LEFT_TO_RIGHT" spacing="50.0">
+         <children>
+            <Label text="تاريخ الانتهاء" textFill="#464141">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="المقدار" textFill="#464141">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="100.0" text="المكون" textAlignment="CENTER" textFill="#464141">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ScrollPane layoutX="32.0" layoutY="295.0" prefHeight="326.0" prefWidth="354.0" style="-fx-background-color: white;">
+         <content>
+            <VBox fx:id="foodPane" prefHeight="326.0" prefWidth="338.0" spacing="5.0" style="-fx-background-color: white;">
+               <children>
+                  <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="46.0" prefWidth="325.0" style="-fx-background-color: pink; -fx-background-radius: 15; -fx-alignment: center; -fx-padding: 20; -fx-spacing: 10;">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="106.0" style="-fx-pref-width: 360; -fx-alignment: center;" text="ليمون أسود" />
+                        <Label prefHeight="18.0" prefWidth="330.0" style="-fx-pref-width: 330; -fx-alignment: center;" text="5 حبات" />
+                        <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="334.0" style="-fx-alignment: center;" text="12 - 12- 2022" />
+                     </children>
+                  </HBox>
+                  <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="46.0" prefWidth="325.0" style="-fx-background-color: pink; -fx-background-radius: 15; -fx-alignment: center; -fx-padding: 20; -fx-spacing: 10;">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="106.0" style="-fx-pref-width: 360; -fx-alignment: center;" text="خبز" />
+                        <Label prefHeight="18.0" prefWidth="330.0" style="-fx-pref-width: 330; -fx-alignment: center;" text="6 كيلو" />
+                        <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="334.0" style="-fx-alignment: center;" text="12 - 12- 2022" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="h" nodeOrientation="RIGHT_TO_LEFT" prefHeight="46.0" prefWidth="325.0" style="-fx-background-color: pink; -fx-background-radius: 15; -fx-alignment: center; -fx-padding: 20; -fx-spacing: 10;">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="106.0" style="-fx-pref-width: 360; -fx-alignment: center;" text="بندورة" />
+                        <Label prefHeight="18.0" prefWidth="330.0" style="-fx-pref-width: 330; -fx-alignment: center;" text="5 حبات" />
+                        <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="334.0" style="-fx-alignment: center;" text="12 - 12- 2022" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Button layoutX="350.0" layoutY="11.0" mnemonicParsing="false" onAction="#goKitchenSetting" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/setting%20Icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

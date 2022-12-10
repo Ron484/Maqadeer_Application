@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewRecipeController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="213.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="400.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#ff7c54" />
+                  <Stop color="#ffc54b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="157.0" fitWidth="400.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/cook.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="100.0" arcWidth="90.0" fill="WHITE" height="200.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" width="400.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutY="152.0" stroke="WHITE" strokeType="INSIDE" width="400.0" />
+      <Label fx:id="recipeName" alignment="CENTER" layoutX="34.0" layoutY="90.0" prefHeight="39.0" prefWidth="334.0" style="-fx-text-alignment: center; -fx-font-family: dubai;" text="اسم الطبخة" textFill="#282626">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="315.0" layoutY="156.0" text="المكونات" />
+      <Label layoutX="322.0" layoutY="375.0" text="الطريقة">
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </Label>
+      <ScrollPane layoutX="31.0" layoutY="183.0" prefHeight="167.0" prefWidth="334.0">
+         <content>
+            <Label fx:id="lblIngredients" alignment="TOP_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="455.0" prefWidth="318.0" style="-fx-background-color: white;" wrapText="true">
+               <padding>
+                  <Insets left="10.0" right="20.0" />
+               </padding>
+            </Label>
+         </content>
+      </ScrollPane>
+      <Pane layoutX="-1.0" prefHeight="48.0" prefWidth="61.0">
+         <children>
+            <Pane layoutX="-3.0" prefHeight="48.0" prefWidth="62.0">
+               <children>
+                  <ImageView fitHeight="22.0" fitWidth="39.0" layoutX="25.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" x="-5.0" y="1.0">
+                     <image>
+                        <Image url="@images/pngegg%20(5).png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btAdd1" layoutX="7.0" mnemonicParsing="false" onAction="#btBack" opacity="0.0" prefHeight="48.0" prefWidth="51.0" textFill="TRANSPARENT" />
+               </children>
+            </Pane>
+         </children></Pane>
+      <HBox layoutX="130.0" layoutY="647.0" />
+      <ScrollPane layoutX="31.0" layoutY="401.0" prefHeight="239.0" prefWidth="334.0">
+         <content>
+            <Label fx:id="lblMethod" alignment="TOP_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="1201.0" prefWidth="322.0" style="-fx-background-color: white;" wrapText="true">
+               <padding>
+                  <Insets left="10.0" right="20.0" top="20.0" />
+               </padding>
+            </Label>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

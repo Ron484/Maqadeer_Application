@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="213.0" stroke="TRANSPARENT" strokeType="INSIDE" width="400.0">
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.48627451062202454" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.772549033164978" blue="0.29411765933036804" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="157.0" fitWidth="400.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/cook.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="100.0" arcWidth="90.0" fill="WHITE" height="170.0" layoutY="111.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" width="400.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutY="181.0" stroke="WHITE" strokeType="INSIDE" width="400.0" />
+      <Label alignment="CENTER" layoutX="36.0" layoutY="131.0" prefHeight="39.0" prefWidth="339.0" style="-fx-text-alignment: center; -fx-font-family: dubai;" text="طبخة اليوم" textFill="#282626">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="151.0" layoutY="586.0" mnemonicParsing="false" onAction="#suggestOtherRecipe" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #FF9A50; -fx-background-radius: 30; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.3) , 10,0,0,1 );" text="اقتراح آخر" textFill="WHITE" />
+      <Button contentDisplay="TOP" layoutX="204.0" layoutY="236.0" mnemonicParsing="false" onAction="#suggestMainCourse" prefHeight="126.0" prefWidth="154.0" style="-fx-background-radius: 10; -fx-background-color: #ADDAD1; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" text="رئيسية">
+         <graphic>
+            <ImageView fitHeight="91.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/mal.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="45.0" layoutY="235.0" mnemonicParsing="false" onAction="#suggestAppetizer" prefHeight="170.0" prefWidth="142.0" style="-fx-background-radius: 10; -fx-background-color: #CCDACD; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" text="مقبلات">
+         <graphic>
+            <ImageView fitHeight="99.0" fitWidth="110.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/sld.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="46.0" layoutY="423.0" mnemonicParsing="false" onAction="#suggestDessert" prefHeight="136.0" prefWidth="142.0" style="-fx-background-radius: 10; -fx-background-color: #FEA597; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" text="حلويات">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="94.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/oneline-cake.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="204.0" layoutY="380.0" mnemonicParsing="false" onAction="#suggestDrink" prefHeight="180.0" prefWidth="154.0" style="-fx-background-radius: 10; -fx-background-color: #F9D98B; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" text="مشروبات">
+         <graphic>
+            <ImageView fitHeight="142.0" fitWidth="97.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/jucie-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <HBox layoutY="644.0" prefHeight="56.0" prefWidth="400.0" style="-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10,0,0,1 );">
+         <children>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goNewRecipesPage" prefHeight="59.0" prefWidth="80.0" selected="true" style="-fx-background-color: #f2f2f2; -fx-background-radius: 0;" text="وصفات" textFill="#79776f">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/wasfat.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goShopListPage" prefHeight="59.0" prefWidth="80.0" selected="true" style="-fx-background-color: #f2f2f2; -fx-background-radius: 0;" text="قائمة الشراء" textFill="#79776f">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/mushtriaty.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goHomePage" prefHeight="59.0" prefWidth="80.0" style="-fx-background-color: #FF9A50;" text="الرئيسية" textFill="#79776f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/hm.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goFoodPage" prefHeight="59.0" prefWidth="80.0" selected="true" style="-fx-background-color: #f2f2f2; -fx-background-radius: 0;" text="مطبخي" textFill="#79776f">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/matbakhy.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goMyRecipePage" prefHeight="59.0" prefWidth="80.0" style="-fx-background-color: #f2f2f2; -fx-background-radius: 0;" text="طبخاتي" textFill="#79776f">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/tabkhaty.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </ToggleButton>
+         </children>
+      </HBox>
+      <Button layoutX="1.0" layoutY="2.0" mnemonicParsing="false" onAction="#logOut" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/log_out_Icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="lblSuggestedRecipe" alignment="CENTER" layoutX="38.0" layoutY="180.0" onMouseClicked="#viewRecipe" onMouseEntered="#underLine" onMouseExited="#nonUnderLine" prefHeight="27.0" prefWidth="339.0" text="سيتم اقتراح طبخة بناء على المتوفر في المطبخ" textAlignment="CENTER" textFill="#dc7f37" />
+      <Line endX="124.79998779296875" layoutX="196.0" layoutY="176.0" startX="-103.20001220703125" stroke="#b4acac" />
+      <VBox fx:id="aletLogOut" layoutX="60.0" layoutY="-225.0" prefHeight="200.0" prefWidth="283.0" spacing="10.0" style="-fx-background-color: #f7f4f4; -fx-background-radius: 15;">
+         <children>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="282.0" text="هل أنت متأكد من تسجيل الخروج ؟">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#noLogOut" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.3) , 10,0,0,1 );" text="لا" textFill="#8e8c8c" />
+                  <Button mnemonicParsing="false" onAction="#okLogOut" prefHeight="31.0" prefWidth="89.0" style="-fx-background-color: #FF9A50; -fx-background-radius: 30; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.3) , 10,0,0,1 );" text="نعم" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="50.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ShoppingListController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="213.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="400.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#ff7c54" />
+                  <Stop color="#ffc54b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="157.0" fitWidth="400.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/cook.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="100.0" arcWidth="90.0" fill="WHITE" height="200.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" width="400.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="-1.0" layoutY="128.0" stroke="WHITE" strokeType="INSIDE" width="400.0" />
+      <HBox layoutY="644.0" prefHeight="56.0" prefWidth="400.0" style="-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );">
+         <children>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goNewRecipesPage" prefHeight="59.0" prefWidth="80.0" selected="true" style="-fx-background-color: #f2f2f2; -fx-background-radius: 0;" text="وصفات" textFill="#79776f">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/wasfat.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goShopListPage" prefHeight="59.0" prefWidth="80.0" selected="true" style="-fx-background-color: #FF9A50; -fx-background-radius: 0;" text="قائمة الشراء" textFill="#79776f">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/ms.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goHomePage" prefHeight="59.0" prefWidth="80.0" style="-fx-background-color: #f2f2f2;" text="الرئيسية" textFill="#79776f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/hom.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goFoodPage" prefHeight="59.0" prefWidth="80.0" selected="true" style="-fx-background-color: #f2f2f2; -fx-background-radius: 0;" text="مطبخي" textFill="#79776f">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/matbakhy.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#goMyRecipePage" prefHeight="59.0" prefWidth="80.0" style="-fx-background-color: #f2f2f2; -fx-background-radius: 0;" text="طبخاتي" textFill="#79776f">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/tabkhaty.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </ToggleButton>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" layoutX="33.0" layoutY="99.0" prefHeight="39.0" prefWidth="334.0" style="-fx-font-family: dubai;" text="قائمة الشراء">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER" layoutX="29.0" layoutY="140.0" prefHeight="482.0" prefWidth="343.0" spacing="15.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="341.0" text="ماذا أريد">
+               <VBox.margin>
+                  <Insets right="3.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="39.0" prefWidth="335.0" spacing="5.0" style="-fx-background-color: #f2f2f2; -fx-background-radius: 50;">
+               <children>
+                  <ToggleButton mnemonicParsing="false" onAction="#remove" prefHeight="26.0" prefWidth="79.0" style="-fx-background-radius: 50; -fx-background-color: FEA597;" text="حذف" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup />
+                     </toggleGroup>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </ToggleButton>
+                  <ToggleButton mnemonicParsing="false" onAction="#add" prefHeight="26.0" prefWidth="77.0" style="-fx-background-radius: 50; -fx-background-color: ADDAD1;" text="اضافة" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup />
+                     </toggleGroup>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </ToggleButton>
+                  <TextField fx:id="tfSearch" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="236.0" promptText="إضافة مكون" style="-fx-background-color: #f2f2f2;">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" top="10.0" />
+                     </padding>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" top="5.0" />
+               </padding>
+            </HBox>
+            <Label fx:id="lblErrorMsg" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="324.0" textFill="#bc0505">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <ScrollPane prefHeight="166.0" prefWidth="341.0" style="-fx-background-color: white;">
+               <content>
+                  <VBox fx:id="pane1" alignment="TOP_CENTER" prefHeight="191.0" prefWidth="318.0" spacing="5.0" style="-fx-background-color: white;">
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="309.0" style="-fx-background-color: #F9D98B; -fx-background-radius: 15;" text="Label" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="341.0" text="مكونات انتهت" />
+            <ScrollPane prefHeight="140.0" prefWidth="334.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <content>
+                  <VBox fx:id="pane11" alignment="TOP_CENTER" prefHeight="230.0" prefWidth="318.0" spacing="5.0" style="-fx-background-color: white;">
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+         </padding>
+      </VBox>
+      <Button layoutX="11.0" layoutY="12.0" mnemonicParsing="false" onAction="#exportToFile" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/export-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
